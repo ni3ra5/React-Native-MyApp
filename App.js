@@ -34,11 +34,21 @@ export default class App extends Component {
 
   render() {
     return (
-      <WebView
-        source={{ uri: "https://ni3ra5.github.io/nibraskhan/" }}
-        ref={this.WEBVIEW_REF}
-        onNavigationStateChange={this.onNavigationStateChange}
-      />
+      <View style={styles.mainContainer}>
+        <WebView
+          source={{ uri: "https://ni3ra5.github.io/nibraskhan/" }}
+          ref={this.WEBVIEW_REF}
+          onNavigationStateChange={this.onNavigationStateChange}
+        />
+      </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  mainContainer: {
+    marginTop: 30,
+    flex: 1,
+  },
+  
+});
